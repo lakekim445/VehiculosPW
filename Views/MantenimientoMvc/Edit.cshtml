@@ -1,0 +1,51 @@
+﻿@model VehiculosMVC.Models.Mantenimiento
+
+@{
+    ViewData["Title"] = "Editar Mantenimiento";
+}
+
+<h1>Editar Mantenimiento</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group mb-3">
+                <label asp-for="IdVehículo" class="control-label">Vehículo</label>
+                <select asp-for="IdVehículo" class="form-control" asp-items="ViewBag.IdVehículo"></select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" type="date" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="TipoServicio" class="control-label"></label>
+                <input asp-for="TipoServicio" class="form-control" />
+                <span asp-validation-for="TipoServicio" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Descripción" class="control-label"></label>
+                <input asp-for="Descripción" class="form-control" />
+                <span asp-validation-for="Descripción" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Costo" class="control-label"></label>
+                <input asp-for="Costo" class="form-control" />
+                <span asp-validation-for="Costo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Actualizar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
