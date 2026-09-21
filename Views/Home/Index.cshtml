@@ -2,21 +2,21 @@
     ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center mt-5">
-    <h1 class="display-4">🚗 Sistema de Vehículos y Mantenimientos</h1>
-    <p class="lead">Selecciona una opción para comenzar</p>
+<div class="text-center mt-4 mb-5">
+    <h1 class="display-5 fw-bold">🚗 Sistema de Vehículos y Mantenimientos</h1>
+    <p class="lead text-muted">Selecciona una opción para comenzar</p>
     <hr class="my-4" />
 </div>
 
-<div class="row justify-content-center mt-5">
+<div class="row justify-content-center g-4">
 
     <!-- Tarjeta: Vehículos -->
-    <div class="col-md-4 mb-4">
-        <div class="card shadow-lg h-100 border-primary">
-            <div class="card-body text-center">
-                <div style="font-size: 4rem;">🚙</div>
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+        <div class="card shadow-sm h-100 border-primary">
+            <div class="card-body text-center d-flex flex-column">
+                <div class="display-1">🚙</div>
                 <h3 class="card-title mt-3">Vehículos</h3>
-                <p class="card-text text-muted">
+                <p class="card-text text-muted flex-grow-1">
                     Administra la flota de vehículos: registra, consulta, edita y elimina.
                 </p>
                 <a asp-controller="VehiculosMvc" asp-action="Index"
@@ -28,12 +28,12 @@
     </div>
 
     <!-- Tarjeta: Mantenimientos -->
-    <div class="col-md-4 mb-4">
-        <div class="card shadow-lg h-100 border-success">
-            <div class="card-body text-center">
-                <div style="font-size: 4rem;">🔧</div>
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+        <div class="card shadow-sm h-100 border-success">
+            <div class="card-body text-center d-flex flex-column">
+                <div class="display-1">🔧</div>
                 <h3 class="card-title mt-3">Mantenimientos</h3>
-                <p class="card-text text-muted">
+                <p class="card-text text-muted flex-grow-1">
                     Consulta el historial de mantenimientos y registra nuevos servicios.
                 </p>
                 <a asp-controller="MantenimientosMvc" asp-action="Index"
@@ -46,3 +46,8 @@
 
 </div>
 
+<div class="text-center mt-5">
+    <a href="/swagger" target="_blank" class="btn btn-outline-secondary btn-sm">
+        📘 Ver documentación Swagger (API REST)
+    </a>
+</div>
